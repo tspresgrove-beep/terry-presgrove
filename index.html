@@ -12,15 +12,19 @@
 <a class="category" href="apologetics.html"><div class="icon">◈</div><h2>Apologetics</h2><div class="cat-rule"></div><div class="empty">Explore questions of faith, reason, and belief.</div></a>
 <a class="category" href="poetry.html"><div class="icon">❧</div><h2>Poetry</h2><div class="cat-rule"></div><div class="empty">Explore poems and reflections in verse.</div></a>
 </section><div class="library-note"><div class="icon">▱</div><div><h2>A Growing Library</h2><p>Additional papers will be added to the appropriate category as they are reviewed and approved.</p></div></div></main>
-<footer><div class="ornament">✦</div><div class="visitor-counter" style="font-size:14px;color:#704512;letter-spacing:.03em;min-height:20px"><span>Visitors: </span><span id="visitor-count">100</span></div><div>© 2026 Terry Presgrove · Faith · Scripture · Eternity</div></footer>
+<footer><div class="ornament">✦</div><div class="visitor-counter" style="font-size:14px;color:#704512;letter-spacing:.03em;min-height:20px">Visitors: <span id="visitor-count">100</span></div><div>© 2026 Terry Presgrove · Faith · Scripture · Eternity</div></footer>
+<script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
 <script>
-(function(){
+document.addEventListener('DOMContentLoaded', function(){
   const el=document.getElementById('visitor-count');
-  const domain=window.location.hostname;
-  const timezone=Intl.DateTimeFormat().resolvedOptions().timeZone;
-  fetch('https://visitor.6developer.com/visit',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({domain:domain,timezone:timezone,page_path:window.location.pathname,page_title:document.title,referrer:document.referrer})})
-  .then(r=>r.json()).then(data=>{if(typeof data.totalCount==='number')el.textContent=100+data.totalCount;})
-  .catch(()=>{});
-})();
+  const counter=new Counter({version:'v1',namespace:'terry-presgrove-site'});
+  counter.get('website-visits').then(function(result){
+    const current=Number(result.value||0);
+    if(current<100){
+      return counter.set('website-visits',100).then(function(){el.textContent='100';});
+    }
+    return counter.up('website-visits').then(function(updated){el.textContent=updated.value;});
+  }).catch(function(){el.textContent='100';});
+});
 </script>
 </body></html>
