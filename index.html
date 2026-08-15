@@ -18,12 +18,8 @@
 document.addEventListener('DOMContentLoaded', function(){
   const el=document.getElementById('visitor-count');
   const counter=new Counter({version:'v1',namespace:'terry-presgrove-site'});
-  counter.get('website-visits').then(function(result){
-    const current=Number(result.value||0);
-    if(current<100){
-      return counter.set('website-visits',100).then(function(){el.textContent='100';});
-    }
-    return counter.up('website-visits').then(function(updated){el.textContent=updated.value;});
+  counter.up('website-visits').then(function(result){
+    el.textContent=100 + Number(result.value || 1) - 1;
   }).catch(function(){el.textContent='100';});
 });
 </script>
