@@ -1,14 +1,17 @@
 const library=[
  {title:"Biblical Studies",folder:"biblical-studies",icon:"✧"},
  {title:"Theology",folder:"theology",icon:"✝"},
- {title:"Prophecy & Eschatology",folder:"prophecy-eschatology",icon:"⌛"},
+ {title:"Eschatology",folder:"prophecy-eschatology",icon:"⌛"},
  {title:"Essential Christianity",folder:"christian-life",icon:"♧"},
  {title:"Apologetics",folder:"apologetics",icon:"◈"},
- {title:"Poetry",folder:"poetry",icon:"❧"}
+ {title:"Topical Studies",folder:"topical-studies",icon:"❧"}
 ];
 const papers={
  "christian-life":[
   {title:"My Greatest Failing: A Confession",file:"papers/my-greatest-failing.pdf"}
+ ],
+ "prophecy-eschatology":[
+  {title:"Armageddon: Why Will the World Fight Against Jesus Christ?",file:"papers/armageddon-why-will-the-world-fight-against-jesus-christ.pdf.pdf"}
  ]
 };
 const target=document.getElementById("library");
