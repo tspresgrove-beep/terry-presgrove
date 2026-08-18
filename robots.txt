@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tspresgrove-beep.github.io/terry-presgrove/sitemap.xml
