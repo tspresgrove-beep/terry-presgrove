@@ -11,7 +11,8 @@ const papers={
   {title:"My Greatest Failing: A Confession",file:"papers/my-greatest-failing.pdf"}
  ],
  "prophecy-eschatology":[
-  {title:"Armageddon: Why Will the World Fight Against Jesus Christ?",file:"papers/armageddon-why-will-the-world-fight-against-jesus-christ.pdf.pdf"}
+  {title:"Armageddon: Why Will the World Fight Against Jesus Christ?",file:"papers/armageddon-why-will-the-world-fight-against-jesus-christ.pdf.pdf"},
+  {title:"Matthew 24 - Near and Far Fulfillment",file:"papers/Matthew 24 - Near and Far Fulfillment.pdf"}
  ]
 };
 const target=document.getElementById("library");
