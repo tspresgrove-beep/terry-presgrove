@@ -12,7 +12,8 @@ const papers={
  ],
  "prophecy-eschatology":[
   {title:"Armageddon: Why Will the World Fight Against Jesus Christ?",file:"papers/armageddon-why-will-the-world-fight-against-jesus-christ.pdf.pdf"},
-  {title:"Matthew 24 - Near and Far Fulfillment",file:"papers/Matthew 24 - Near and Far Fulfillment.pdf"}
+  {title:"Matthew 24 - Near and Far Fulfillment",file:"papers/Matthew 24 - Near and Far Fulfillment.pdf"},
+  {title:"What Is the Scroll - Understanding the Scroll of Revelation 5",file:"papers/What Is the Scroll - Understanding the Scroll of Revelation 5.pdf"}
  ]
 };
 const target=document.getElementById("library");
